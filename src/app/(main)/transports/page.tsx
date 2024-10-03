@@ -16,6 +16,12 @@ import {
 } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
 
+const IMAGES = [
+	"https://promova.com/content/transportation_vocabulary_09188cbada.png",
+	'https://www.gohawaii.com/sites/default/files/styles/image_gallery_bg_xl/public/hero-unit-images/Train.jpg?itok=rjqPA5Fd',
+	'https://www.thoughtco.com/thmb/874IJ3oGLijeSs5eNgKJGyYEvnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-463523885-5c489e37c9e77c0001921afd.jpg'
+]
+
 export default function Transports() {
 	const [transports, setTransports] = useState([]);
 	const [open, setOpen] = useState(false);
@@ -77,7 +83,7 @@ export default function Transports() {
 					<div className="bg-background rounded-lg overflow-hidden shadow-lg" key={transport.transportId}>
 						<div>
 							<img
-								src="https://promova.com/content/transportation_vocabulary_09188cbada.png"
+								src={IMAGES[Math.floor(Math.random() * IMAGES.length)]}
 								width={600}
 								height={400}
 								alt="transport"

@@ -15,6 +15,12 @@ import {
 } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
 
+const IMAGES = [
+	"https://images.squarespace-cdn.com/content/v1/5a87961cbe42d637c54cab93/1624434019659-PGWM75DXZFNRKDY6LCBL/cheap-accommodation-traveling.jpg",
+	'https://cf.bstatic.com/xdata/images/hotel/max1024x768/479154047.jpg?k=3cf5c783e2c2d1b1cc10110fecd94bfd15635162d2907aa359e1fa982f48da2e&o=&hp=1',
+	'https://cdn.sanity.io/images/faycjvmy/production/6da71099d0557b9ec975629cd12bd01bdfcec558-3500x2330.jpg/201899-56%20(1).jpg?rect=0,181,3500,1969&w=320&h=180&fit=min&auto=format'
+]
+
 export default function Accommodation() {
 	const [accommodations, setAccommodations] = useState([]);
 	const [open, setOpen] = useState(false);
@@ -78,7 +84,7 @@ export default function Accommodation() {
 					<div className="bg-background rounded-lg overflow-hidden shadow-lg" key={accommodation.accommodationId}>
 						<div>
 							<img
-								src="https://images.squarespace-cdn.com/content/v1/5a87961cbe42d637c54cab93/1624434019659-PGWM75DXZFNRKDY6LCBL/cheap-accommodation-traveling.jpg"
+								src={IMAGES[Math.floor(Math.random() * IMAGES.length)]}
 								width={600}
 								height={400}
 								alt="accommodation"

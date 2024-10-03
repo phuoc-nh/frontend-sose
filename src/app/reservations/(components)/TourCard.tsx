@@ -1,28 +1,5 @@
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-// {
-//         "bookingId": 9,
-//         "tour": {
-//             "tourId": 1,
-//             "name": "City Lights Tour",
-//             "description": "Explore the beauty of the city at night, with landmarks illuminated.",
-//             "price": 50.00,
-//             "duration": "3 hours",
-//             "maxParticipants": 20,
-//             "availableSpots": 16,
-//             "location": "New York City",
-//             "createdAt": "2024-09-28T12:30:52.476962",
-//             "updatedAt": "2024-09-28T22:49:46.234376"
-//         },
-//         "customerName": "John Deo",
-//         "customerEmail": "John@gmail.com",
-//         "numberOfPeople": 1,
-//         "totalPrice": 50.00,
-//         "status": "confirmed",
-//         "bookingDate": "2024-09-28T22:34:10.297085",
-//         "createdAt": "2024-09-28T22:34:10.389938",
-//         "updatedAt": "2024-09-28T22:34:10.389951"
-//     }
 
 type Tour = {
 	name: string;
@@ -34,6 +11,8 @@ type Tour = {
 	customerName: string;
 	bookingDate: string;
 };
+
+
 
 export default function TourCard({ tour }: { tour: Tour }) {
   return (

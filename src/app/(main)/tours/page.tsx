@@ -15,6 +15,12 @@ import {
 } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label"
 
+const IMAGES = [
+	'https://wildlifetours.com.au/wp-content/uploads/great-ocean-road-tour-2.webp',
+	"https://media.licdn.com/dms/image/D4D12AQHsv_EMoAG8bg/article-cover_image-shrink_720_1280/0/1682017374465?e=2147483647&v=beta&t=H6XsdSythkDLzO5_CeRpGhKc5--Hs95SvkuG446vscY",
+	'https://currumbinsanctuary.com.au/application/files/5016/8629/0780/TT_WEB_Side.png',
+]
+
 export default function Tours() {
 	const [tours, setTours] = useState([]);
 	const [open, setOpen] = useState(false);
@@ -69,11 +75,11 @@ export default function Tours() {
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 				{/*  */}
 
-				{tours.map((tour) => (
+				{tours.map((tour, id) => (
 					<div className="bg-background rounded-lg overflow-hidden shadow-lg" key={tour.tourId}>
 						<div>
 							<img
-								src="https://media.licdn.com/dms/image/D4D12AQHsv_EMoAG8bg/article-cover_image-shrink_720_1280/0/1682017374465?e=2147483647&v=beta&t=H6XsdSythkDLzO5_CeRpGhKc5--Hs95SvkuG446vscY"
+								src={IMAGES[ Math.floor(Math.random() * 3)]}
 								width={600}
 								height={400}
 								alt="tour"
