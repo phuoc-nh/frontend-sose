@@ -40,7 +40,7 @@ export default function Tours() {
 
 				console.log(data);
 			});
-			
+
 		fetch("http://localhost:8084/api/v1/accommodation/reservations")
 			.then((res) => res.json())
 			.then((data) => {
@@ -87,7 +87,7 @@ export default function Tours() {
 					})}
 				</div>
 			</section>}
-			{transport.length && <section className="py-12 px-6 md:px-12">
+			{transport.length > 0 && <section className="py-12 px-6 md:px-12">
 				<h2 className="text-2xl md:text-3xl font-bold mb-8">Reserved Transports</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 					{transport.map((t) => {
@@ -114,7 +114,7 @@ export default function Tours() {
 				</div>
 			</section>}
 
-			{rooms.length && <section className="py-12 px-6 md:px-12">
+			{rooms.length > 0 && <section className="py-12 px-6 md:px-12">
 				<h2 className="text-2xl md:text-3xl font-bold mb-8">Reserved Rooms</h2>
 				<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 					{rooms.map((t) => {

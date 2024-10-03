@@ -79,7 +79,7 @@ export default function Tours() {
 					<div className="bg-background rounded-lg overflow-hidden shadow-lg" key={tour.tourId}>
 						<div>
 							<img
-								src={IMAGES[ Math.floor(Math.random() * 3)]}
+								src={IMAGES[id % IMAGES.length]}
 								width={600}
 								height={400}
 								alt="tour"

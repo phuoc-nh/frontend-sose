@@ -79,11 +79,11 @@ export default function Transports() {
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 				{/*  */}
 
-				{transports.map((transport) => (
+				{transports.map((transport, id) => (
 					<div className="bg-background rounded-lg overflow-hidden shadow-lg" key={transport.transportId}>
 						<div>
 							<img
-								src={IMAGES[Math.floor(Math.random() * IMAGES.length)]}
+								src={IMAGES[id % IMAGES.length]}
 								width={600}
 								height={400}
 								alt="transport"

@@ -80,11 +80,11 @@ export default function Accommodation() {
 			<h2 className="text-2xl md:text-3xl font-bold mb-8">Featured Accommodations</h2>
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-				{accommodations.map((accommodation) => (
+				{accommodations.map((accommodation, id) => (
 					<div className="bg-background rounded-lg overflow-hidden shadow-lg" key={accommodation.accommodationId}>
 						<div>
 							<img
-								src={IMAGES[Math.floor(Math.random() * IMAGES.length)]}
+								src={IMAGES[id % IMAGES.length]}
 								width={600}
 								height={400}
 								alt="accommodation"
